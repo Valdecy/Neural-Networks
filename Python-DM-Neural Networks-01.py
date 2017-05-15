@@ -1,6 +1,6 @@
 ############################################################################
 
-# Neural Networks
+# NN
 # Prof. Valdecy Pereira
 # e-mail: valdecy.pereira@gmail.com
 # site: github.com/Valdecy
@@ -11,7 +11,6 @@
 import pandas as pd
 import numpy  as np
 import matplotlib.pyplot as plt
-import itertools
 from sklearn.metrics import confusion_matrix
 from sklearn import preprocessing
 
@@ -25,7 +24,7 @@ def tanh(a):
 def d_tanh(b):
     return 1.0 - b**2 # Derivative of Tanh
 
-# Function: nn - Neural Network
+# Function: nn
 def nn (X, y, layers = [3], learning_rate = 0.5, activation = 'sigmoid', epochs = 5000):
     
     ################ Part 1 - Network Architecture #############################
