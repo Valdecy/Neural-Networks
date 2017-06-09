@@ -4,7 +4,7 @@ Neural Network Function for Binary or Linear Output. The function returns the fi
 
 * Trainning: Full Batch.
 * Activation Functions: sigmoid, tanh,  identity, relu or gaussian.
-* Output Activation Functions: sigmoid, tanh,  identity, relu or gaussian.
+* Output Activation Functions: sigmoid, tanh,  identity, relu, gaussian or softmax.
 * Epochs: The total number of iterations.
 * Layers: List with the number of hidden layers and quantity of neurons. Ex: layers[0] = Perceptron; layers[1, 7] = Two hidden layers, the first one with 1 neuron and the second one with 7 neurons.
 * Loss Function: bin_cross_entropy (Binary Output) or mse (Linear Output).
