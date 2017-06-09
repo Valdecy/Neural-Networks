@@ -1,3 +1,3 @@
-# NN
+# Neural Network Function
 
-NN Function
+Neural Network Function for Binary or Linear Output
