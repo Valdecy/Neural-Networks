@@ -351,9 +351,9 @@ def nn (Xdata, ydata, layers = [0], learning_rate = 0.01, activation = 'sigmoid'
 dataset = pd.read_csv('Python-DM-Neural Networks-02.csv', sep = ';')
 dataset = dataset.replace(",", ".", regex = True)
 
-X_bin = dataset.iloc[:, 2:7]
-# X_bin = preprocessing.scale(X_bin) # from sklearn import preprocessing
-# X_bin = X_bin.reshape((X_bin.shape[0], X_bin.shape[1]))
+X_bin = dataset.iloc[:, 2:7] # dataset needs to be scaled
+X_bin = preprocessing.scale(X_bin) # from sklearn import preprocessing
+X_bin = X_bin.reshape((X_bin.shape[0], X_bin.shape[1]))
 y_bin = dataset.iloc[:, 1] # [:, 0] = first column       
 y_bin = y_bin.reshape((y_bin.shape[0], 1))
 
@@ -366,7 +366,7 @@ comparison_bin = np.append(prediction_bin, y_bin, axis = 1)
 dataset = pd.read_csv('Python-DM-Neural Networks-03.csv', sep = ';')
 dataset = dataset.replace(",", ".", regex = True)
 
-X_lin = dataset.iloc[:, 1:3]
+X_lin = dataset.iloc[:, 1:3] # dataset already scaled
 # X_lin = preprocessing.scale(X_lin) # from sklearn import preprocessing
 # X_lin = X_lin.reshape((X_lin.shape[0], X_lin.shape[1]))
 y_lin = dataset.iloc[:, 0]       
