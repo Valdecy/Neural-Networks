@@ -351,34 +351,30 @@ def nn (Xdata, ydata, layers = [0], learning_rate = 0.01, activation = 'sigmoid'
 dataset = pd.read_csv('Python-DM-Neural Networks-02.csv', sep = ';')
 dataset = dataset.replace(",", ".", regex = True)
 
-X = dataset.iloc[:, 2:7]
-# X = preprocessing.scale(X) # from sklearn import preprocessing
-# X = X.reshape((X.shape[0], X.shape[1]))
-y = dataset.iloc[:, 1] # [:, 0] = first column       
-y = y.reshape((y.shape[0], 1))
+X_bin = dataset.iloc[:, 2:7]
+# X_bin = preprocessing.scale(X_bin) # from sklearn import preprocessing
+# X_bin = X_bin.reshape((X_bin.shape[0], X_bin.shape[1]))
+y_bin = dataset.iloc[:, 1] # [:, 0] = first column       
+y_bin = y_bin.reshape((y_bin.shape[0], 1))
 
-model_bin = nn(X, y, layers = [4,4], learning_rate = 0.1, activation = 'sigmoid', output_activation = 'sigmoid', loss = 'bin_cross_entropy', epochs = 5000)
+model_bin = nn(X_bin, y_bin, layers = [4,4], learning_rate = 0.1, activation = 'sigmoid', output_activation = 'sigmoid', loss = 'bin_cross_entropy', epochs = 5000)
 
-prediction_bin = predict_bin_nn(X, weigths = model_bin)
-comparison_bin = np.append(prediction_bin, y, axis = 1)
-
-prediction_1 = predict_bin_nn(X[1,None], weigths = model_bin) # subset
+prediction_bin = predict_bin_nn(X_bin, weigths = model_bin)
+comparison_bin = np.append(prediction_bin, y_bin, axis = 1)
 
 # Linear Outuput
 dataset = pd.read_csv('Python-DM-Neural Networks-03.csv', sep = ';')
 dataset = dataset.replace(",", ".", regex = True)
 
-X = dataset.iloc[:, 1:3]
-# X = preprocessing.scale(X) # from sklearn import preprocessing
-# X = X.reshape((X.shape[0], X.shape[1]))
-y = dataset.iloc[:, 0]       
-y = y.reshape((y.shape[0], 1))
+X_lin = dataset.iloc[:, 1:3]
+# X_lin = preprocessing.scale(X_lin) # from sklearn import preprocessing
+# X_lin = X_lin.reshape((X_lin.shape[0], X_lin.shape[1]))
+y_lin = dataset.iloc[:, 0]       
+y_lin = y_lin.reshape((y_lin.shape[0], 1))
 
-model = nn(X, y, layers = [0], learning_rate = 0.01, output_activation = 'identity', loss = 'mse', epochs = 2000)
+model = nn(X_lin, y_lin, layers = [0], learning_rate = 0.01, output_activation = 'identity', loss = 'mse', epochs = 2000)
 
-prediction = predict_nn(X, weigths = model) 
-comparison = np.append(prediction, y, axis = 1)
-
-prediction_1 = predict_nn(X[0,None], weigths = model)  # subset
+prediction = predict_nn(X_lin, weigths = model) 
+comparison = np.append(prediction, y_lin, axis = 1)
 
 ########################## End of Code #####################################
