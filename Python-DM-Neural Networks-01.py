@@ -349,6 +349,9 @@ def nn (Xdata, ydata, layers = [0], learning_rate = 0.01, activation = 'sigmoid'
 
 # Binary Outuput
 dataset = pd.read_csv('Python-DM-Neural Networks-02.csv', sep = ';')
+# dataset from:
+# FAVERO, L. P.; BELFIORE, P.; SILVA, F. L.; CHAN, B. (2009). Analise de Dados: Modelagem Multivariada para Tomada de Decisoes.CAMPUS.
+
 dataset = dataset.replace(",", ".", regex = True)
 
 X_bin = dataset.iloc[:, 2:7] # dataset needs to be scaled
@@ -365,6 +368,8 @@ comparison_bin = np.append(prediction_bin, y_bin, axis = 1)
 # Linear Outuput
 dataset = pd.read_csv('Python-DM-Neural Networks-03.csv', sep = ';')
 dataset = dataset.replace(",", ".", regex = True)
+# dataset from:
+# PEREIRA, V. (2017). Project: Neural Networks, GitHub repository: <https://github.com/Valdecy/Neural Networks>
 
 X_lin = dataset.iloc[:, 1:3] # dataset already scaled
 # X_lin = preprocessing.scale(X_lin) # from sklearn import preprocessing
