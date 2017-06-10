@@ -10,3 +10,4 @@ Neural Network Function for Binary or Linear Output. The function returns the fi
 * Loss Function: bin_cross_entropy (Binary Output) or mse (Linear Output).
 * For the Binary Output case a confusion matrix table and a loss function graph with the accuracy (acc) for each iteration is provided.
 * For the Linear Output case a loss function graph for each iteration is provided.
+* Finnaly a prediction function for the Binary Output (predict_bin_nn) and for the Linear Output (predict_nn) is also included.
