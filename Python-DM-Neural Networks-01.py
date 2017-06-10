@@ -33,7 +33,7 @@ def d_tanh(b):
 def identity(a):
     return a 
 def d_identity(b):
-    return (b + 1)/(b + 1)
+    return (b*b + 1)/(b*b + 1)
 
 def relu(a):
     return a * (a > 0)
