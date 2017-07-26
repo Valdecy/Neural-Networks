@@ -7,7 +7,8 @@
 # Lesson: Neural Networks
 
 # Citation: 
-# PEREIRA, V. (2017). Project: Neural Networks, File: Python-DM-Neural Networks-01.py, GitHub repository: <https://github.com/Valdecy/Neural Networks>
+# PEREIRA, V. (2017). Project: Neural Networks, File: Python-DM-Neural Networks-01.py, GitHub repository: 
+# <https://github.com/Valdecy/Neural Networks>
 
 ############################################################################
 
