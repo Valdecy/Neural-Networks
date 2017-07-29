@@ -325,7 +325,7 @@ def nn (Xdata, ydata, layers = [0], learning_rate = 0.01, activation = 'sigmoid'
     # CM Plot
     if (loss == 'bin_cross_entropy'):
         plt.figure()
-        plot_confusion_matrix(cm, classes = ('0','1'), title = 'Confusion Matrix', cmap = plt.cm.Blues)
+        plot_confusion_matrix(cm, classes = np.unique(ydata), title = 'Confusion Matrix', cmap = plt.cm.Blues)
         plt.show()
     
     # Loss and acc Plots
