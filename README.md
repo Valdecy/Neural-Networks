@@ -1,6 +1,6 @@
 # Neural Network Function
 
-Neural Network Function for Binary or Linear Output. The function returns: 1) the final weigths, 2) the hidden layers activation function and 3) the output activation function
+Pure python Neural Network Function for Binary or Linear Output. The function returns: 1) the final weigths, 2) the hidden layers activation function and 3) the output activation function
 
 * Trainning: Full Batch.
 * Activation Functions: "sigmoid", "tanh",  "identity", "relu" or "gaussian".
