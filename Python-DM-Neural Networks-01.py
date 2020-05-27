@@ -359,7 +359,7 @@ X_bin = dataset.iloc[:, 2:7] # dataset needs to be scaled
 X_bin = preprocessing.scale(X_bin) # from sklearn import preprocessing
 X_bin = X_bin.reshape((X_bin.shape[0], X_bin.shape[1]))
 y_bin = dataset.iloc[:, 1] # [:, 0] = first column       
-y_bin = y_bin.reshape((y_bin.shape[0], 1))
+y_bin = y_bin.values.reshape((y_bin.shape[0], 1))
 
 model_bin = nn(X_bin, y_bin, layers = [4,4], learning_rate = 0.1, activation = 'sigmoid', output_activation = 'sigmoid', loss = 'bin_cross_entropy', epochs = 5000)
 
@@ -376,7 +376,7 @@ X_lin = dataset.iloc[:, 1:3] # dataset already scaled
 # X_lin = preprocessing.scale(X_lin) # from sklearn import preprocessing
 # X_lin = X_lin.reshape((X_lin.shape[0], X_lin.shape[1]))
 y_lin = dataset.iloc[:, 0]       
-y_lin = y_lin.reshape((y_lin.shape[0], 1))
+y_lin = y_lin.values.reshape((y_lin.shape[0], 1))
 
 model = nn(X_lin, y_lin, layers = [0], learning_rate = 0.01, output_activation = 'identity', loss = 'mse', epochs = 2000)
 
